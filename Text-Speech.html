@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Text-to-Speech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text to Speech Converter</h1>
+        <p class="subtitle">Convert your text to natural sounding speech using OpenAI</p>
+        
+        <div class="input-section">
+            <textarea id="text-input" placeholder="Enter your text here..."></textarea>
+            
+            <div class="controls">
+                <div class="voice-selector">
+                    <label for="voice-select">Voice:</label>
+                    <select id="voice-select">
+                        <option value="alloy">Alloy (neutral, clear)</option>
+                        <option value="echo">Echo (warm, expressive)</option>
+                        <option value="fable">Fable (storytelling, animated)</option>
+                        <option value="onyx">Onyx (deep, authoritative)</option>
+                        <option value="nova">Nova (bright, cheerful)</option>
+                        <option value="shimmer">Shimmer (soft, soothing)</option>
+                    </select>
+                </div>
+                
+                <button id="generate-btn" class="primary-btn">
+                    <span class="btn-text">Generate Speech</span>
+                    <span class="spinner hidden"></span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="output-section hidden">
+            <h2>Your Audio</h2>
+            <audio id="audio-player" controls></audio>
+            <button id="download-btn" class="secondary-btn">Download Audio</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
